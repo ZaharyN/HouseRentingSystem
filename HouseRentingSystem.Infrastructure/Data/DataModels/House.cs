@@ -30,9 +30,7 @@ namespace HouseRentingSystem.Infrastructure.Data.DataModels
         public string ImageUrl { get; set; } = string.Empty;
 
         [Required]
-        [Range(typeof(decimal),
-            HousePricePerMonthMinValue, 
-            HousePricePerMonthMaxValue)]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal PricePerMonth { get; set; }
 
         [Required]
