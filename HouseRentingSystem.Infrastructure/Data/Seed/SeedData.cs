@@ -126,7 +126,5 @@ namespace HouseRentingSystem.Infrastructure.Data.Seed
                 AgentId = Agent.Id
             };
         }
-
-
     }
 }
