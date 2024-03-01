@@ -13,7 +13,6 @@ namespace HouseRentingSystem.Controllers
             return  View(new AllHousesQueryModel());
         }
 
-        [Authorize]
         public async Task<IActionResult> Mine()
         {
             return View(new AllHousesQueryModel());
