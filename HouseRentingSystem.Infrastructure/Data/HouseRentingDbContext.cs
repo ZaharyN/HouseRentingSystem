@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography.X509Certificates;
 
-namespace HouseRentingSystem.Infrastrucure.Data
+namespace HouseRentingSystem.Infrastructure.Data
 {
     public class HouseRentingDbContext : IdentityDbContext
     {
