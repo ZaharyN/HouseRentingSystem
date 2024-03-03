@@ -22,7 +22,7 @@ namespace HouseRentingSystem.Core.Services.House
                 .OrderByDescending(h => h.Id)
                 .Take(3)
                 .Select(h => new HouseIndexServiceModel()
-                {
+                { 
                     Id = h.Id,
                     Title = h.Title,
                     ImageUrl = h.ImageUrl
