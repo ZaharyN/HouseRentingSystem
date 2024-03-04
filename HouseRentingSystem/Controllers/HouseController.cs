@@ -4,16 +4,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HouseRentingSystem.Controllers
 {
-    [Authorize]
-    public class HouseController : Controller
+    public class HouseController : BaseController
     {
         [AllowAnonymous]
+        [HttpGet]
         public async Task<IActionResult> All()
         {
             return  View(new AllHousesQueryModel());
         }
-
-        public async Task<IActionResult> Mine()
+		[HttpGet]
+		public async Task<IActionResult> Mine()
         {
             return View(new AllHousesQueryModel());
         }
