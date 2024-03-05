@@ -1,16 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
 using static HouseRentingSystem.Infrastructure.Constants.DataConstants;
 
 namespace HouseRentingSystem.Infrastructure.Data.DataModels
 {
-    public class Agent
+    [Index(nameof(PhoneNumber), IsUnique = true)]
+	public class Agent
     {
         [Key]
         public int Id { get; set; }
@@ -22,6 +18,5 @@ namespace HouseRentingSystem.Infrastructure.Data.DataModels
         [Required]
         public string UserId { get; set; } = string.Empty;
         public IdentityUser User { get; set; } = null!;
-
     }
 }
