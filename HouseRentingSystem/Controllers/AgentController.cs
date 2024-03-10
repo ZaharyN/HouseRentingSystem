@@ -2,7 +2,6 @@
 using HouseRentingSystem.Core.Contracts;
 using HouseRentingSystem.Extensions;
 using HouseRentingSystem.Models.Agents;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using static HouseRentingSystem.Core.Constants.MessageConstants;
 
@@ -47,7 +46,7 @@ namespace HouseRentingSystem.Controllers
 
             await agentService.CreateAsync(User.Id(), model.PhoneNumber);
 
-            return RedirectToAction(nameof(HouseController.All), "House");
+            return RedirectToAction(nameof(HouseController.All), "House");  
         }
     }
 }
